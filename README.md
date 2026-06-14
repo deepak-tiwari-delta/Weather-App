@@ -42,7 +42,7 @@ Through this project, I learned:
 
 ## 🔗 Live Demo
 
-( https://github.com/deepak-tiwari-delta/Weather-App )
+(https://deepak-tiwari-delta.github.io/Weather-App/git add .)
 
 ## 📂 Installation
 
