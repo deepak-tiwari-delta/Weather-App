@@ -25,7 +25,7 @@ A simple and responsive Weather App built using HTML, CSS, and JavaScript that f
 
 ## 📸 Screenshot
 
-(Add a screenshot of your project here)
+( ![Weather App Screenshot](weather.png))
 
 ## 🎯 What I Learned
 
@@ -42,7 +42,7 @@ Through this project, I learned:
 
 ## 🔗 Live Demo
 
-(Add GitHub Pages link here after deployment)
+( https://github.com/deepak-tiwari-delta/Weather-App )
 
 ## 📂 Installation
 
