@@ -1,63 +1,16 @@
-# 🌦️ Weather App
+# React + Vite
 
-A simple and responsive Weather App built using HTML, CSS, and JavaScript that fetches real-time weather data from the OpenWeather API.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- Search weather by city name
-- Real-time weather data
-- Temperature display in Celsius
-- Feels Like temperature
-- Humidity information
-- Wind Speed information
-- Weather condition description
-- Weather icons
-- Enter key support for quick search
-- Error handling for invalid city names
-- Clean and responsive UI
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠️ Technologies Used
+## React Compiler
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- OpenWeather API
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📸 Screenshot
+## Expanding the Oxlint configuration
 
-( ![Weather App Screenshot](weather.png))
-
-## 🎯 What I Learned
-
-Through this project, I learned:
-
-- DOM Manipulation
-- Event Listeners
-- Async/Await
-- Fetch API
-- Working with JSON data
-- API Integration
-- Error Handling
-- Dynamic UI Updates
-
-## 🔗 Live Demo
-
-(https://deepak-tiwari-delta.github.io/Weather-App/git add .)
-
-## 📂 Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/weather-app.git
-```
-
-2. Open the project folder
-
-3. Run `index.html` in your browser
-
-## 📧 Author
-
-Deepak Tiwari
-
-Frontend Developer Learner 🚀
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
