@@ -30,7 +30,7 @@ function SearchBar({
       />
 
       <button
-        onClick={fetchWeather}
+        onClick={() => fetchWeather()}
         disabled={loading}
        className="
 bg-cyan-500
