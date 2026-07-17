@@ -1,3 +1,5 @@
+import { getDay } from "../utils/formatDate";
+
 function ForecastCard({ forecast }) {
   return (
     <div className="mt-8">
@@ -6,28 +8,38 @@ function ForecastCard({ forecast }) {
         5-Day Forecast
       </h2>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
 
         {forecast.map((day) => (
 
           <div
             key={day.dt}
-            className="bg-white/20 backdrop-blur rounded-xl p-4 text-center text-white"
+            className="
+bg-white/20
+backdrop-blur-lg
+rounded-2xl
+p-4
+text-center
+text-white
+shadow-lg
+hover:scale-105
+hover:bg-white/30
+transition-all
+duration-300
+"
           >
 
             <p className="font-semibold">
-              {new Date(day.dt_txt).toLocaleDateString("en-IN", {
-                weekday: "short",
-              })}
-            </p>
+  {getDay(day.dt_txt)}
+</p>
 
-            <img
-              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
-              alt=""
+           <img
+src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
+              alt={day.weather[0].description}
               className="mx-auto"
             />
 
-            <p className="text-lg font-bold">
+            <p className="text-2xl font-bold">
               {Math.round(day.main.temp)}°C
             </p>
 

@@ -57,21 +57,30 @@ function App() {
       if (data.cod !== 200) {
         setError("City not found. Please check the spelling.");
         setWeather(null);
+setForecast([]);
       } else {
-        setWeather(data);
-        const forecastData = await getForecast(data.name);
+       setWeather(data);
 
-setForecast(forecastData.list.filter((item, index) => index % 8 === 0));
-        saveHistory(data.name);
-        setCity("");
+const forecastData = await getForecast(data.name);
+
+const dailyForecast = forecastData.list.filter(
+  (_, index) => index % 8 === 0
+);
+
+setForecast(dailyForecast);
+
+saveHistory(data.name);
+setCity("");
       }
     } catch (error) {
       setError("Something went wrong. Please try again.");
-      setWeather(null);
+     setWeather(null);
+setForecast([]);
     } finally {
       setLoading(false);
     }
   };
+
 
   // location-based weather fetching
     const handleCurrentLocation = () => {
@@ -93,6 +102,7 @@ setForecast(forecastData.list.filter((item, index) => index % 8 === 0));
         if (data.cod !== 200) {
           setError("Unable to fetch weather.");
           setWeather(null);
+setForecast([]);
         } else {
           setWeather(data);
           saveHistory(data.name);
@@ -144,9 +154,9 @@ setForecast(forecastData.list.filter((item, index) => index % 8 === 0));
             {/* Dark Mode (Coming Soon) */}
             <button
               className="bg-white/20 hover:bg-white/30 rounded-xl px-4 py-3 transition"
-              title="Coming Soon"
+             onClick={() => setDarkMode(!darkMode)}
             >
-              🌙
+              {darkMode ? "☀️" : "🌙"}
             </button>
 
           </div>
@@ -161,8 +171,9 @@ setForecast(forecastData.list.filter((item, index) => index % 8 === 0));
           />
 
           <button
+          disabled={loading}
   onClick={handleCurrentLocation}
-  className="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl flex items-center justify-center gap-2"
+  className="mt-4 w-full bg-green-500 hover:bg-green-600 disabled:opacity-50 text-white py-3 rounded-xl flex items-center justify-center gap-2 transition"
 >
   <MdMyLocation size={22} />
   Use Current Location
@@ -202,9 +213,9 @@ setForecast(forecastData.list.filter((item, index) => index % 8 === 0));
           )}
 
           {/* Forecast */}
-          {!loading && forecast.length > 0 && (
-            <ForecastCard forecast={forecast} />
-          )}
+         {!loading && weather && forecast.length > 0 && (
+    <ForecastCard forecast={forecast}/>
+)}
 
           {/* Search History */}
           <SearchHistory
