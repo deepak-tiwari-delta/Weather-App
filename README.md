@@ -1,63 +1,112 @@
-# 🌦️ Weather App
+# 🌤 Weather App
 
-A simple and responsive Weather App built using HTML, CSS, and JavaScript that fetches real-time weather data from the OpenWeather API.
+A modern and responsive Weather Application built with **React**, **Vite**, and **Tailwind CSS**. The app provides real-time weather information, 5-day forecast, current location support, and search history using the OpenWeather API.
 
-## 🚀 Features
+---
 
-- Search weather by city name
-- Real-time weather data
-- Temperature display in Celsius
-- Feels Like temperature
-- Humidity information
-- Wind Speed information
-- Weather condition description
-- Weather icons
-- Enter key support for quick search
-- Error handling for invalid city names
-- Clean and responsive UI
+## 🚀 Live Demo
 
-## 🛠️ Technologies Used
+👉 https://deepak-tiwari-delta.github.io/Weather-App
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+---
+
+## 📂 GitHub Repository
+
+👉 https://github.com/deepak-tiwari-delta/Weather-App
+
+---
+
+# ✨ Features
+
+- 🔍 Search weather by city
+- 📍 Current location weather
+- 📅 5-Day weather forecast
+- 🌡 Real-time temperature
+- 💧 Humidity information
+- 🌬 Wind speed
+- ☁ Weather condition
+- 📝 Recent search history
+- 💾 LocalStorage support
+- ⌨ Search using Enter key
+- ⚡ Loading spinner
+- ❌ Error handling
+- 📱 Fully responsive design
+- 🎨 Glassmorphism UI
+
+---
+
+# 🛠 Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript (ES6+)
 - OpenWeather API
+- React Icons
 
-## 📸 Screenshot
+---
 
-( ![Weather App Screenshot](weather.png))
+# 📂 Folder Structure
 
-## 🎯 What I Learned
-
-Through this project, I learned:
-
-- DOM Manipulation
-- Event Listeners
-- Async/Await
-- Fetch API
-- Working with JSON data
-- API Integration
-- Error Handling
-- Dynamic UI Updates
-
-## 🔗 Live Demo
-
-(https://deepak-tiwari-delta.github.io/Weather-App/git add .)
-
-## 📂 Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/weather-app.git
+```text
+src
+│
+├── components
+│   ├── ErrorMessage.jsx
+│   ├── ForecastCard.jsx
+│   ├── Loading.jsx
+│   ├── SearchBar.jsx
+│   ├── SearchHistory.jsx
+│   └── WeatherCard.jsx
+│
+├── services
+│   └── weatherApi.js
+│
+├── utils
+│   └── formatDate.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
 ```
 
-2. Open the project folder
+---
 
-3. Run `index.html` in your browser
+# ⚙ Installation
 
-## 📧 Author
+```bash
+git clone https://github.com/deepak-tiwari-delta/Weather-App.git
 
-Deepak Tiwari
+cd Weather-App
 
-Frontend Developer Learner 🚀
+npm install
+
+npm run dev
+```
+
+---
+
+# 🌐 API
+
+This project uses the **OpenWeather API** to fetch real-time weather data and forecast.
+
+---
+
+# 📈 Future Improvements
+
+- 🌙 Dark Mode
+- ⭐ Favorite Cities
+- 🎨 Dynamic Background
+- 🌡 Temperature Unit Toggle (°C / °F)
+- 📊 Weather Charts
+
+---
+
+# 👨‍💻 Author
+
+**Deepak Tiwari**
+
+Frontend Developer
+
+GitHub:
+https://github.com/deepak-tiwari-delta
